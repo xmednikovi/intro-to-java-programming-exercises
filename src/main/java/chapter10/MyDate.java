@@ -2,31 +2,31 @@ package chapter10;
 
 import java.util.GregorianCalendar;
 
-class MyDate {
+public class MyDate {
 
     private int day;
     private int month;
     private int year;
 
-    MyDate (){
+    public MyDate (){
         GregorianCalendar calendar = new GregorianCalendar();
         this.day = calendar.get(GregorianCalendar.DAY_OF_MONTH);
         this.month = calendar.get(GregorianCalendar.MONTH) + 1;
         this.year = calendar.get(GregorianCalendar.YEAR);
     }
 
-    MyDate (int day, int month, int year){
+    public MyDate (int day, int month, int year){
         this.day = day;
         this.month = month;
         this.year = year;
     }
 
-    MyDate (long ellapsedTime){
+    public MyDate (long ellapsedTime){
         this();
         this.setDate(ellapsedTime);
     }
 
-    void setDate(long ellapsedTime) {
+    public void setDate(long ellapsedTime) {
         GregorianCalendar calendar = new GregorianCalendar();
         calendar.setTimeInMillis(ellapsedTime);
         this.day = calendar.get(GregorianCalendar.DAY_OF_MONTH);
