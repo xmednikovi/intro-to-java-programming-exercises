@@ -2,7 +2,7 @@ package chapter09;
 
 import java.util.Date;
 
-class Account {
+public class Account {
 
     private int id = 0;
     private double balance = 0;
@@ -10,9 +10,9 @@ class Account {
 
     private Date dateCreated = new Date();
 
-    Account(){}
+    public Account(){}
 
-    Account(int id, int initialBalance){
+    public Account(int id, int initialBalance){
         this.id = id;
         this.balance = initialBalance;
     }
@@ -45,20 +45,20 @@ class Account {
         return dateCreated;
     }
 
-    double monthlyInterestRate(){
+    public double monthlyInterestRate(){
         return annualInterestRate / 1200;
     }
 
-    double getMonthlyInterest(){
+    public double getMonthlyInterest(){
         double monthlyRate = this.monthlyInterestRate();
         return this.balance * monthlyRate;
     }
 
-    void withdraw(double amount){
+    public void withdraw(double amount){
         this.balance = this.balance - amount;
     }
 
-    void deposit (double amount){
+    public void deposit (double amount){
         this.balance = this.balance + amount;
     }
 }

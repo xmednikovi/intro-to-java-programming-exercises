@@ -1,13 +1,13 @@
 package chapter09;
 
-class Stock {
+public class Stock {
 
     private String symbol;
     private String name;
     private double previousClosingPrice;
     private double currentPrice;
 
-    Stock(String symbol, String name){
+    public Stock(String symbol, String name){
         this.symbol = symbol;
         this.name = name;
     }
@@ -44,7 +44,7 @@ class Stock {
         this.currentPrice = currentPrice;
     }
 
-    double getChangePercent(){
+    public double getChangePercent(){
         double difference = this.previousClosingPrice - this.currentPrice;
         return difference / this.previousClosingPrice * 100;
     }

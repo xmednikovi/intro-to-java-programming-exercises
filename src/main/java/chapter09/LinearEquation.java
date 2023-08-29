@@ -4,7 +4,7 @@ public class LinearEquation {
 
     private double a,b,c,d,e,f;
 
-    LinearEquation(double a, double b, double c, double d, double e, double f){
+    public LinearEquation(double a, double b, double c, double d, double e, double f){
         this.a = a;
         this.b = b;
         this.c = c;
@@ -13,16 +13,16 @@ public class LinearEquation {
         this.f = f;
     }
 
-    boolean isSolvable(){
+    public boolean isSolvable(){
         double result = (this.a * this.d) - (this.b * this.c);
         return result != 0;
     }
 
-    double getX(){
+    public double getX(){
         return ( (this.e * this.d) - (this.b * this.f) ) / ( (this.a * this.d) - (this.b * this.c) );
     }
 
-    double getY(){
+    public double getY(){
         return ( (this.a * this.f) - (this.e * this.c) ) / ( (this.a * this.d) - (this.b * this.c));
     }
 

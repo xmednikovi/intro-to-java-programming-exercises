@@ -1,17 +1,17 @@
 package chapter09;
 
-class Fan {
+public class Fan {
 
-    static int SLOW = 1;
-    static int MEDIUM = 2;
-    static int FAST = 3;
+    public static int SLOW = 1;
+    public static int MEDIUM = 2;
+    public static int FAST = 3;
 
     private int speed;
     private boolean on;
     private double radius;
     private String color;
 
-    Fan() {
+    public Fan() {
         this.speed = SLOW;
         this.on = false;
         this.radius = 5;
