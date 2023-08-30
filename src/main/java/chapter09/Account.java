@@ -61,4 +61,9 @@ public class Account {
     public void deposit (double amount){
         this.balance = this.balance + amount;
     }
+
+    @Override
+    public String toString() {
+        return String.format("Generic account\nId:%d\nBalance:EUR %.2f", this.getId(), this.getBalance());
+    }
 }
