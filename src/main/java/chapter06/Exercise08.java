@@ -7,7 +7,7 @@ public class Exercise08 {
     }
 
     public static double kilometerToMile(double km){
-        return km / 1.6;
+        return km * 0.621;
     }
 
     public static void main(String[] args) {

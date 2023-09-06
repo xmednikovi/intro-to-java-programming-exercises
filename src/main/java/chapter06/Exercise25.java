@@ -8,9 +8,7 @@ public class Exercise25 {
         int seconds = (int) (mills / 1000) % 60;
         int minutes = (int) ( (mills / (1000*60)) % 60);
         int hours = (int) ( (mills / (1000*60*60)) % 24);
-
-        String result = String.format("%2d:%02d:%02d", hours, minutes, seconds);
-        return result;
+        return String.format("%02d:%02d:%02d", hours, minutes, seconds);
     }
 
     public static void main(String[] args) {

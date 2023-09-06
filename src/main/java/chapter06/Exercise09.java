@@ -3,11 +3,11 @@ package chapter06;
 public class Exercise09 {
 
     public static double poundToKilogram (double pound){
-        return pound / 2.204;
+        return pound * 0.4535;
     }
 
     public static double kilogramToPound(double kg){
-        return kg / 0.453;
+        return kg * 2.205;
     }
 
     public static void main(String[] args) {
