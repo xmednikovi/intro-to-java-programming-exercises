@@ -13,6 +13,16 @@ public class MyString2 {
         return Arrays.compare(this.arr, s.toCharArray());
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof MyString2){
+            MyString2 str = (MyString2) obj;
+            return Arrays.equals(this.arr, str.arr);
+        } else {
+            return false;
+        }
+    }
+
     public MyString2 substring(int begin){
         if (begin > arr.length || begin < 0) {
             throw new IndexOutOfBoundsException();
