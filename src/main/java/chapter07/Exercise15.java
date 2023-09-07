@@ -1,41 +1,20 @@
 package chapter07;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Exercise15 {
 
     public static void printArray (int[] arr){
-        for (int i = 0; i < arr.length; i++){
-            int current = arr[i];
-            if (current > 0) {
-                System.out.print(current + " ");
-            }
-        }
+        Arrays.stream(arr).forEach(i -> System.out.print(i + " "));
     }
 
     public static boolean isInArray(int[] arr, int value){
-        for (int i = 0; i<arr.length; i++){
-            if (arr[i] == value) {
-                return true;
-            }
-        }
-        return false;
+        return Arrays.stream(arr).filter(i -> i==value).findFirst().isPresent();
     }
 
     public static int[] eliminateDuplicates(int[] arr){
-        int[] result = new int[arr.length];
-        int nextPosition = 0;
-        for (int i = 0; i < arr.length ; i ++){
-            // get current number
-            int currentNumber = arr[i];
-            // if result does not contain currentNumber -> add
-            // else -> continue
-            if (isInArray(result, currentNumber) == false){
-                result[nextPosition] = currentNumber;
-                nextPosition ++;
-            }
-        }
-        return result;
+        return Arrays.stream(arr).distinct().toArray();
     }
 
     public static void main(String[] args) {
