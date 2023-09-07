@@ -33,8 +33,9 @@ public class RegularPolygon {
     }
 
     public double getArea(){
-        double s = this.getPerimeter() / 2;
-        return (this.n * Math.pow(s, 2)) / (4 * Math.tan(Math.PI / this.n));
+
+        return (n * (Math.pow(side, 2)) / (4 * Math.tan(Math.PI / n)));
+
     }
 
     public int getN() {

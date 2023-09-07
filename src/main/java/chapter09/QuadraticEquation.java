@@ -32,6 +32,17 @@ public class QuadraticEquation {
         }
     }
 
+    public int getNumberOfRoots(){
+        double discriminant = this.getDiscriminant();
+        if (discriminant > 0){
+            return 2;
+        } else if (discriminant == 0){
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+
     public double getA() {
         return a;
     }
