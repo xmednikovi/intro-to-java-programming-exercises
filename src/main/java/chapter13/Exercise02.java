@@ -5,12 +5,12 @@ import java.util.Scanner;
 
 public class Exercise02 {
 
-    public static double average(ArrayList<Integer> list) {
+    public static int average(ArrayList<Integer> list) {
         int sum = 0;
         for (Integer i: list){
             sum += i;
         }
-        return (double) (sum / list.size());
+        return sum / list.size();
     }
 
     public static void main(String[] args) {
@@ -22,8 +22,8 @@ public class Exercise02 {
             numbers.add(scanner.nextInt());
         }
 
-        double result = average(numbers);
+        int result = average(numbers);
 
-        System.out.printf("The average of the list is %.2f", result);
+        System.out.printf("The average of the list is %d", result);
     }
 }

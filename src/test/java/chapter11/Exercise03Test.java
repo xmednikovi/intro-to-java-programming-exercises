@@ -11,12 +11,12 @@ public class Exercise03Test {
     @Test(expected = OverdraftException.class)
     public void overdraftExceptionCheckingAccountTest(){
         Account checkingAccount = new CheckingAccount(1, 100, 50);
-        checkingAccount.withdraw(160);
+        checkingAccount.withdraw(500);
     }
 
     @Test(expected = OverdraftException.class)
     public void overdraftExceptionSavingAccountTest(){
         Account savingsAccount = new SavingsAccount(2, 500);
-        savingsAccount.withdraw(600);
+        savingsAccount.withdraw(1000);
     }
 }
